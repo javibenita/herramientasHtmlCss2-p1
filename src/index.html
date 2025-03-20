@@ -1,27 +1,126 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tortillitas de Camarones de Cádiz</title>
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__title">Tortillitas de Camarones de Cádiz</h1>
+  </header>
+
+  <section class="introduction">
+    <div class="container">
+      <h2 class="introduction__title"><i class="fa-solid fa-circle-info"></i> Introducción</h2>
+      <p class="introduction__text">
+        Las tortillitas de camarones son una especialidad gaditana, crujientes y llenas de sabor. Originarias de la
+        provincia de Cádiz, especialmente de San Fernando, estas delicias combinan harina de trigo y garbanzo con
+        camarones frescos, cebolleta y perejil. Se fríen hasta alcanzar una textura crujiente y dorada, siendo una tapa
+        imprescindible en la gastronomía andaluza.
       </p>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+  </section>
+
+  <section class="history">
+    <div class="container">
+      <h2 class="history__title"><i class="fa-solid fa-circle-question"></i> Historia de las Tortillitas de Camarones
+      </h2>
+      <p class="history__text">
+        Las tortillitas de camarones son un emblema de la gastronomía gaditana, con una historia que se remonta a varios
+        siglos. Su origen podría situarse entre los siglos XVI y XVII en la Bahía de Cádiz, resultado de la fusión de la
+        cocina local con influencias italianas. La comunidad genovesa, asentada en Cádiz desde el siglo XIII, introdujo
+        preparaciones como la "farinata", una torta elaborada con harina de garbanzo y agua. Al combinar esta técnica
+        con ingredientes locales, como los camarones de las marismas gaditanas, surgieron las primeras versiones de las
+        tortillitas.
+        <br>
+        Con el tiempo, la receta evolucionó. A principios del siglo XX, en la Venta de Vargas de San Fernando, la
+        cocinera María Picardo innovó la preparación al ajustar la proporción de harinas y utilizar sifón en lugar de
+        agua, logrando una textura más fina y crujiente.
+        <br>
+        Hoy en día, las tortillitas de camarones son una tapa imprescindible en la provincia de Cádiz, disfrutadas tanto
+        por locales
+        como por visitantes.
+      </p>
+    </div>
+  </section>
+
+  <section class="recipe">
+    <div class="container">
+      <h2 class="recipe__title"><i class="fa-solid fa-utensils"></i> Receta Tradicional</h2>
+      <p class="recipe__text">Ingredientes:</p>
+      <ul class="recipe__ingredients">
+        <li class="recipe__ingredient"><i class="fas fa-check"></i> 100 g de camarones frescos</li>
+        <li class="recipe__ingredient"><i class="fas fa-check"></i> 100 g de harina de trigo</li>
+        <li class="recipe__ingredient"><i class="fas fa-check"></i> 100 g de harina de garbanzo</li>
+        <li class="recipe__ingredient"><i class="fas fa-check"></i> 1 cebolleta picada finamente</li>
+        <li class="recipe__ingredient"><i class="fas fa-check"></i> Perejil fresco picado</li>
+        <li class="recipe__ingredient"><i class="fas fa-check"></i> 300 ml de agua muy fría</li>
+        <li class="recipe__ingredient"><i class="fas fa-check"></i> Sal al gusto</li>
+        <li class="recipe__ingredient"><i class="fas fa-check"></i> Aceite de oliva virgen extra para freír</li>
+      </ul>
+      <p class="recipe__text">Pasos:</p>
+      <ol class="recipe__steps">
+        <li class="recipe__step"><i class="fa-solid fa-1"></i> Mezcla las harinas en un bol. Añade la cebolleta y el
+          perejil picados.</li>
+        <li class="recipe__step"><i class="fa-solid fa-2"></i> Incorpora los camarones enteros a la mezcla.</li>
+        <li class="recipe__step"><i class="fa-solid fa-3"></i> Vierte el agua fría poco a poco hasta obtener una masa
+          ligera.</li>
+        <li class="recipe__step"><i class="fa-solid fa-4"></i> Calienta el aceite en una sartén y fríe cucharadas de la
+          masa hasta que estén doradas y crujientes.</li>
+        <li class="recipe__step"><i class="fa-solid fa-5"></i> Escurre las tortillitas sobre papel absorbente y sírvelas
+          calientes.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <h2 class="gallery__title"><i class="fa-solid fa-images"></i> Galería</h2>
+      <div class="gallery__images">
+        <img src="assets/images/tortillitas1.jpg" alt="Tortillitas de Camarones" class="gallery__image">
+        <img src="assets/images/tortillitas2.jpg" alt="Tortillitas de Camarones" class="gallery__image">
+        <img src="assets/images/tortillitas3.jpg" alt="Tortillitas de Camarones" class="gallery__image">
+        <img src="assets/images/tortillitas4.jpg" alt="Tortillitas de Camarones" class="gallery__image">
+      </div>
+    </div>
+  </section>
+
+  <section class="video">
+    <div class="container">
+      <h2 class="video__title"><i class="fa-solid fa-circle-play"></i> Video de Preparación</h2>
+      <div class="video__container">
+        <iframe class="video__iframe" src="https://www.youtube.com/embed/bG6iMLxS6Oo" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="references">
+    <div class="container">
+      <h2 class="references__title"><i class="fa-solid fa-link"></i> Fuentes Consultadas</h2>
+      <ul class="references__list">
+        <li class="references__item"><a class="references__link"
+            href="https://cadiz.cosasdecome.es/la-estrella-mas-fina-cadiz/" target="_blank">Historia y origen de las
+            tortillitas de camarones - Cosas De Comé</a></li>
+        <li class="references__item"><a class="references__link"
+            href="https://elpais.com/gastronomia/el-comidista/2024-08-10/carta-de-amor-a-las-tortillitas-de-camarones-su-historia-y-donde-tomarlas.html"
+            target="_blank">Carta de amor a las tortillitas de camarones: su historia y dónde tomarlas - El País</a>
+        </li>
+        <li class="references__item"><a class="references__link"
+            href="https://www.lavozdigital.es/cadiz/20120304/sociedad/cinco-siglos-tortillitas-camarones-20120304.html"
+            target="_blank">Cinco siglos de tortillitas de camarones - La Voz Digital</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>

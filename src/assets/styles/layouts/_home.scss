@@ -1,57 +1,235 @@
+// Estilos globales
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  font-family: $font-stack;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+// Contenedor
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+// Encabezado
+.header {
+  background-color: $primary-color;
+  padding: 20px 0;
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+// Sección de introducción
+.introduction {
+  padding: 40px 0;
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 1.2rem;
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+// Sección de historia
+.history {
+  padding: 40px 0;
+  background-color: #faedcd;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+  }
 }
+
+// Sección de receta
+.recipe {
+  padding: 40px 0;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  &__ingredients,
+  &__steps {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  &__text,
+  &__ingredient,
+  &__step {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  &__ingredient i,
+  &__step i {
+    color: $secondary-color;
+    margin-right: 10px;
+  }
+}
+
+// Sección de galería
+.gallery {
+  padding: 40px 0;
+  background-color: #faedcd;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Sección de video
+.video {
+  padding: 40px 0;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+  }
+
+  &__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+// Sección de referencias
+.references {
+  padding: 40px 0;
+  background-color: #faedcd;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    font-size: 1.2rem;
+    color: $link-color;
+    text-decoration: none;
+    border-bottom: 1px solid $link-color;
+    transition: color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      color: $link-hover-color;
+      border-color: $link-hover-color;
+    }
+  }
+}
+
+// Pie de página
+.footer {
+  background-color: $primary-color;
+  padding: 20px 0;
+  text-align: center;
+
+  &__text {
+    color: #fff;
+    font-size: 1rem;
+    padding-bottom: 20px;
+  }
+}
+
+// Media Queries para Responsividad
+@media (max-width: 768px) {
+  .header__title {
+    font-size: 2rem;
+  }
+
+  .introduction__title,
+  .history__title,
+  .recipe__title,
+  .gallery__title,
+  .video__title,
+  .references__title {
+    font-size: 1.5rem;
+  }
+
+  .introduction__text,
+  .history__text,
+  .recipe__ingredient,
+  .recipe__step,
+  .references__link,
+  .footer__text {
+    font-size: 1rem;
+  }
+}
+
+//en archivo _components.scss
+// Botón primario
+/*.button {
+  &--primary {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}*/
