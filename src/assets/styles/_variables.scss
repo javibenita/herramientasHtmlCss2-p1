@@ -5,6 +5,5 @@ $secondary-color: #283618;
 $background-color: #fefae0;
 $text-color: #606c38;
 $link-color: #8b0000;
-/*$link-hover-color: darken($link-color, 15%);*/
 $link-hover-color: color.scale($link-color, $lightness: -40%);
 $font-stack: "Arial", sans-serif;
